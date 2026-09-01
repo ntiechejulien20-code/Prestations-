@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Délices de Lakaine – Art Culinaire & Événements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== CANVAS BACKGROUND ========== -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-mark">
+          <img src="image/logo.png" alt="Les Délices de Lakaine" />
+        </div>
+        <div class="logo-words">
+          <span class="logo-main">Les Délices</span>
+          <span class="logo-sub">de Lakaine</span>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-links-brand">
+          <div class="nav-links-logo">
+            <img src="image/logo.png" alt="Les Délices de Lakaine" />
+            <div class="logo-words">
+              <span class="logo-main">Les Délices</span>
+              <span class="logo-sub">de Lakaine</span>
+            </div>
+          </div>
+        </li>
+        <li><a href="#accueil" class="nav-link active" data-section="accueil">Accueil</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#galerie" class="nav-link" data-section="galerie">Galerie</a></li>
+        <li><a href="#apropos" class="nav-link" data-section="apropos">À Propos</a></li>
+        <li><a href="#avis" class="nav-link" data-section="avis">Avis</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / ACCUEIL ========== -->
+  <section id="accueil" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">✦ Art Culinaire d'Exception ✦</div>
+      <h1 class="hero-title">
+        <span class="hero-line-1">Les Délices</span>
+        <em class="hero-line-2">de Lakaine</em>
+      </h1>
+      <p class="hero-subtitle">Christine Lakaine transforme chaque événement en une expérience gastronomique inoubliable. Des saveurs qui racontent votre histoire.</p>
+      <div class="hero-tags">
+        <span class="tag">Mariage</span>
+        <span class="tag">Anniversaire</span>
+        <span class="tag">Deuil</span>
+        <span class="tag">Fête</span>
+        <span class="tag">Particulier</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Découvrir nos prestations</a>
+        <a href="#contact" class="btn btn-outline">Nous contacter</a>
+      </div>
+      <div class="hero-availability">
+        <span class="availability-dot"></span>
+        Disponible 24h/24 – 7j/7
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="section services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Nos Prestations</span>
+        <h2 class="section-title">Un Art pour Chaque Occasion</h2>
+        <p class="section-desc">Christine Lakaine met son expertise culinaire au service de vos moments les plus précieux. Chaque prestation est soigneusement personnalisée selon vos besoins et vos envies.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">💍</div>
+          <h3>Mariage</h3>
+          <p>Un festin de rêve pour célébrer votre union. Menus raffinés, buffets élégants, gâteaux sur mesure — chaque détail est pensé pour que votre jour soit parfait.</p>
+          <div class="service-features">
+            <span>Menu personnalisé</span>
+            <span>Buffet royal</span>
+            <span>Gâteau sur mesure</span>
+          </div>
+        </div>
+
+        <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-badge">Populaire</div>
+          <div class="service-icon">🎂</div>
+          <h3>Anniversaire</h3>
+          <p>Célébrez chaque année avec gourmandise et élégance. Des créations sucrées et salées qui transforment votre fête en souvenir inoubliable.</p>
+          <div class="service-features">
+            <span>Décoration thématique</span>
+            <span>Gâteaux artistiques</span>
+            <span>Finger food</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">🕊️</div>
+          <h3>Cérémonie de Deuil</h3>
+          <p>Dans les moments difficiles, nous préparons avec douceur et respect des repas réconfortants qui soutiennent les familles endeuillées avec dignité.</p>
+          <div class="service-features">
+            <span>Repas chaleureux</span>
+            <span>Service discret</span>
+            <span>Accompagnement familial</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">🎉</div>
+          <h3>Fêtes & Réceptions</h3>
+          <p>Cocktails dînatoires, soirées thématiques, réceptions corporatives — nous animons vos événements avec une cuisine créative et festive.</p>
+          <div class="service-features">
+            <span>Cocktails dînatoires</span>
+            <span>Animations culinaires</span>
+            <span>Service traiteur</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon">🏡</div>
+          <h3>Particuliers</h3>
+          <p>Un chef à domicile pour vos repas quotidiens, dîners romantiques ou soirées intimes entre amis. Le luxe de la grande cuisine chez vous.</p>
+         <div class="service-features">
+            <span>Chef à domicile</span>
+            <span>Dîners privés</span>
+            <span>Cours culinaires</span>
+          </div>
+        </div>
+
+        <div class="service-card cta-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon">✨</div>
+          <h3>Prestation Personnalisée</h3>
+          <p>Votre événement est unique. Parlons-en ensemble et créons ensemble une expérience culinaire qui vous ressemble parfaitement.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ========== -->
+  <section id="galerie" class="section galerie-section">
+    <div class="section-container">
+      <div class="section-header light">
+        <span class="section-eyebrow">Galerie</span>
+        <h2 class="section-title">Nos Créations en Images</h2>
+        <p class="section-desc">Découvrez quelques-unes de nos réalisations. Chaque plat est une œuvre d'art, chaque table une scène de vie.</p>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="mariage">Mariage</button>
+        <button class="filter-btn" data-filter="anniversaire">Anniversaire</button>
+        <button class="filter-btn" data-filter="fete">Fête</button>
+        <button class="filter-btn" data-filter="plats">Plats</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item tall" data-category="mariage">
+          <img class="gallery-img" src="image/d367f0779f1b65854bddb41db6541316.webp.jpg" alt="Table dressée avec art pour un mariage" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Table d'exception</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="fete">
+          <img class="gallery-img" src="image/7dd866f939cd7b7ab37229c897bb949c.webp.jpg" alt="Service buffet lors d'une réception" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Service buffet raffiné</span>
+          </div>
+        </div>
+
+        <div class="gallery-item large" data-category="anniversaire">
+          <img class="gallery-img" src="image/04faa1133b296654485578b40cdd11e5.webp.jpg" alt="Buffet chaud dressé avec chafing dishes" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Buffet chic & festif</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="plats">
+          <img class="gallery-img" src="image/1618cbba6f67302ed3f6cfb1117d4681.webp.jpg" alt="Plats traditionnels mijotés présentés en buffet" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Spécialités mijotées</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="plats">
+          <img class="gallery-img" src="image/603f4165f475ea4bcdfcbcc05e561437.jpg" alt="Plateau de fruits frais et bouchées salées" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Fraîcheur & bouchées</span>
+          </div>
+        </div>
+
+        <div class="gallery-item tall" data-category="fete">
+          <img class="gallery-img" src="image/70a88b8e060ed2550f86a66aa6d62c60.jpg" alt="Brochettes, grillades et plantains pour une fête" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Grillades & accompagnements</span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ========== À PROPOS ========== -->
+  <section id="apropos" class="section apropos-section">
+    <div class="section-container">
+      <div class="apropos-grid">
+        <div class="apropos-image-col">
+          <div class="apropos-img-wrapper">
+            <div class="apropos-placeholder">
+              <span></span>
+              <p><img src="image/logo.png" alt=""></p>
+            </div>
+            <div class="apropos-badge-float">
+              <span class="badge-number">10+</span>
+              <span class="badge-label">Années d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="apropos-content-col">
+          <span class="section-eyebrow">À Propos</span>
+          <h2 class="section-title">Christine Lakaine,<br /><em>Artiste Culinaire</em></h2>
+          <p class="apropos-lead">Née avec une passion dévorante pour la gastronomie, Christine Lakaine a transformé son talent naturel en un art de vivre qu'elle partage avec générosité lors de chacune de vos célébrations.</p>
+          <p class="apropos-text">Formée aux meilleures techniques culinaires et forte d'une décennie d'expérience dans l'événementiel, Christine apporte à chaque prestation une touche d'élégance, d'authenticité et de créativité qui lui est propre. Ses créations mêlent saveurs locales et inspirations internationales pour offrir une expérience gustative unique.</p>
+          <p class="apropos-text">Que ce soit pour un mariage intimiste de 20 personnes ou une grande réception de 500 convives, Christine s'investit avec la même passion et le même souci du détail pour faire de votre événement un moment d'exception.</p>
+
+          <div class="apropos-stats">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Événements réalisés</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Clients satisfaits</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Disponibilité</span>
+            </div>
+          </div>
+
+          <div class="apropos-cta">
+            <a href="#contact" class="btn btn-primary">Prendre contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AVIS & COMMENTAIRES ========== -->
+  <section id="avis" class="section avis-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Témoignages</span>
+        <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+        <p class="section-desc">Des centaines de familles et d'entreprises nous ont fait confiance. Voici quelques-uns de leurs retours sincères.</p>
+      </div>
+
+      <!-- Avis existants -->
+      <div class="reviews-slider" id="reviewsSlider">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Christine a sublimé notre mariage avec des plats d'une finesse incroyable. Nos invités parlent encore de ce repas ! Professionnelle, créative et à l'écoute."</p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div>
+                <span class="review-name">Marie & Jean-Paul</span>
+                <span class="review-event">Mariage – Décembre 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Pour les 60 ans de ma mère, Christine a créé un buffet royal qui a émerveillé toute la famille. La présentation était digne d'un grand restaurant. Merci infiniment !"</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <span class="review-name">Sandra K.</span>
+                <span class="review-event">Anniversaire – Octobre 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Disponible à tout moment, même à la dernière minute ! Christine a organisé une réception pour 200 personnes en 48h. Un vrai miracle culinaire. Je recommande à 1000% !"</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div>
+                <span class="review-name">Aubin M.</span>
+                <span class="review-event">Réception corporate – Mars 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Très bonne prestation lors du repas de deuil de notre père. Christine a su apporter douceur et réconfort dans un moment douloureux. Le repas était savoureux et le service impeccable."</p>
+            <div class="review-author">
+              <div class="review-avatar">F</div>
+              <div>
+                <span class="review-name">Famille Ndiaye</span>
+                <span class="review-event">Cérémonie de deuil – Janvier 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn">‹</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn">›</button>
+        </div>
+      </div>
+
+      <!-- Formulaire d'avis -->
+      <div class="review-form-wrapper">
+        <h3 class="review-form-title">Laissez Votre Avis</h3>
+        <p class="review-form-subtitle">Vous avez bénéficié de nos prestations ? Partagez votre expérience !</p>
+
+        <div class="review-form" id="reviewForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Votre nom *</label>
+              <input type="text" id="reviewName" placeholder="Ex: Marie Dupont" />
+            </div>
+            <div class="form-group">
+              <label>Type d'événement *</label>
+              <select id="reviewEvent">
+                <option value="">Choisir...</option>
+                <option>Mariage</option>
+                <option>Anniversaire</option>
+                <option>Cérémonie de deuil</option>
+                <option>Fête / Réception</option>
+                <option>Particulier</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Votre note *</label>
+            <div class="star-rating" id="starRating">
+              <span class="star" data-val="1">★</span>
+              <span class="star" data-val="2">★</span>
+              <span class="star" data-val="3">★</span>
+              <span class="star" data-val="4">★</span>
+              <span class="star" data-val="5">★</span>
+            </div>
+            <input type="hidden" id="reviewRating" value="0" />
+          </div>
+
+          <div class="form-group">
+            <label>Votre commentaire *</label>
+            <textarea id="reviewText" rows="4" placeholder="Racontez-nous votre expérience avec Les Délices de Lakaine..."></textarea>
+          </div>
+
+          <button class="btn btn-primary" id="submitReview">Publier mon avis ✨</button>
+          <p class="form-note">* Champs obligatoires. Votre avis sera affiché après validation.</p>
+        </div>
+
+        <div id="reviewSuccess" class="review-success" style="display:none;">
+          <span>🎉</span>
+          <h4>Merci pour votre avis !</h4>
+          <p>Votre témoignage a été bien reçu et sera affiché après validation. Nous vous remercions de votre confiance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Contact</span>
+        <h2 class="section-title">Parlons de Votre Événement</h2>
+        <p class="section-desc">Disponible 24h/24 et 7j/7 pour répondre à toutes vos questions et planifier ensemble votre prestation culinaire idéale.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card phone-card">
+          <div class="contact-icon">📞</div>
+          <h4>Téléphone</h4>
+          <!-- Remplacez par votre vrai numéro -->
+          <a href="tel:+221XXXXXXXXX" class="contact-info">+237 689786064</a>
+          <p class="contact-note">Appels & SMS acceptés</p>
+        </div>
+
+        <div class="contact-card whatsapp-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h4>WhatsApp</h4>
+          <!-- Remplacez XXXXXXXXXXX par votre numéro WhatsApp (sans +) -->
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%20Christine%2C%20je%20souhaite%20un%20devis%20pour%20mon%20%C3%A9v%C3%A9nement." target="_blank" class="contact-info">Écrire sur WhatsApp</a>
+          <p class="contact-note">Réponse rapide assurée</p>
+        </div>
+
+        <div class="contact-card email-card">
+          <div class="contact-icon">✉️</div>
+          <h4>E-mail</h4>
+          <!-- Remplacez par votre vraie adresse email -->
+          <a href="mailto:christine.lakaine@email.com" class="contact-info">christine.lakaine@email.com</a>
+          <p class="contact-note">Réponse sous 24h max</p>
+        </div>
+      </div>
+
+      <div class="contact-promise">
+        <div class="promise-icon-photo">
+          <img src="image/logo.png" alt="Service disponible 24h/24 et 7j/7" loading="lazy" />
+        </div>
+        <div class="promise-badge">
+          <span class="availability-dot"></span>
+          <strong>Disponible 24h/24 – 7j/7</strong>
+        </div>
+        <p>Aucune demande n'est trop grande ou trop petite. Christine Lakaine s'engage à vous répondre dans les meilleurs délais et à vous proposer une solution culinaire parfaitement adaptée à votre événement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">
+            <img src="image/logo.png" alt="Les Délices de Lakaine" />
+          </div>
+          <div class="logo-words">
+            <span class="logo-main">Les Délices</span>
+            <span class="logo-sub">de Lakaine</span>
+          </div>
+        </div>
+        <p class="footer-tagline">L'art culinaire au service<br />de vos plus beaux moments.</p>
+        <div class="footer-socials">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%20Christine%2C%20je%20souhaite%20vous%20contacter." target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+          <!-- Gmail -->
+          <a href="mailto:christine.lakaine@email.com" class="social-btn gmail-btn" aria-label="Gmail">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#apropos">À Propos</a></li>
+          <li><a href="#avis">Avis Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h5>Nos Services</h5>
+        <ul>
+          <li><a href="#services">Mariage</a></li>
+          <li><a href="#services">Anniversaire</a></li>
+          <li><a href="#services">Cérémonie de deuil</a></li>
+          <li><a href="#services">Fêtes & Réceptions</a></li>
+          <li><a href="#services">Particuliers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h5>Disponibilité</h5>
+        <div class="footer-availability">
+          <div class="avail-item">
+            <span class="availability-dot"></span>
+            <span>Disponible maintenant</span>
+          </div>
+          <p>Lundi – Dimanche<br /><strong>24 heures sur 24</strong></p>
+          <a href="#contact" class="btn btn-outline-sm">Nous joindre</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Les Délices de Lakaine – Christine Lakaine. Tous droits réservés.</p>
+      <p>Fait avec ❤️ pour sublimer vos événements.</p>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <!-- ========== LIGHTBOX GALERIE ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+    <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
